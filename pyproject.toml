@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlops-proj"
+version = "0.0.1"
+description = "An MLOps project for productionizing models"
+authors = [{name = "Aditya Jadhav", email = "aditya29jadhav@gmail.com"}]
+requires-python = ">=3.8"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
